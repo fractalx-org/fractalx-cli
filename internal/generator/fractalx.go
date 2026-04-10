@@ -17,10 +17,11 @@ func genSpecYaml(spec *model.ProjectSpec) string {
   version: "%s"
   javaVersion: "%s"
   springBootVersion: %s
+  fractalxVersion: %s
   description: "%s"
 
 services:
-`, spec.GroupID, spec.ArtifactID, spec.Version, spec.JavaVersion, spec.SpringBootVersion, spec.Description))
+`, spec.GroupID, spec.ArtifactID, spec.Version, spec.JavaVersion, spec.SpringBootVersion, spec.FractalXVersion, spec.Description))
 
 	for _, svc := range spec.Services {
 		schema := transform.ResolvedSchema(&svc)

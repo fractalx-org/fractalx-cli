@@ -2,16 +2,17 @@ package model
 
 // ProjectSpec is the top-level configuration for a FractalX project.
 type ProjectSpec struct {
-	GroupID           string
-	ArtifactID        string
-	Version           string
-	Description       string
-	JavaVersion       string // "17" | "21"
-	SpringBootVersion string // e.g. "3.3.0"
-	Security          string // "none" | "jwt" | "oauth2" | "apikey"
-	Services          []Service
-	Sagas             []Saga
-	Infra             InfraConfig
+	GroupID            string
+	ArtifactID         string
+	Version            string
+	Description        string
+	JavaVersion        string // "17" | "21"
+	SpringBootVersion  string // e.g. "3.3.0"
+	FractalXVersion    string // e.g. "0.3.2"
+	Security           string // "none" | "jwt" | "oauth2" | "apikey"
+	Services           []Service
+	Sagas              []Saga
+	Infra              InfraConfig
 }
 
 // Service represents a bounded-context service within the monolith.

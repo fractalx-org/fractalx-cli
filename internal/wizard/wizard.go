@@ -80,6 +80,10 @@ func stepProject(spec *model.ProjectSpec) error {
 				Default: "21",
 			},
 		},
+		{
+			Name:   "fractalxVersion",
+			Prompt: &survey.Input{Message: "FractalX version:", Default: "0.3.2"},
+		},
 	}
 
 	answers := struct {
@@ -89,6 +93,7 @@ func stepProject(spec *model.ProjectSpec) error {
 		Description       string `survey:"description"`
 		SpringBootVersion string `survey:"springBootVersion"`
 		JavaVersion       string `survey:"javaVersion"`
+		FractalXVersion   string `survey:"fractalxVersion"`
 	}{}
 
 	if err := survey.Ask(qs, &answers); err != nil {
@@ -101,6 +106,7 @@ func stepProject(spec *model.ProjectSpec) error {
 	spec.Description = answers.Description
 	spec.SpringBootVersion = answers.SpringBootVersion
 	spec.JavaVersion = answers.JavaVersion
+	spec.FractalXVersion = answers.FractalXVersion
 	return nil
 }
 

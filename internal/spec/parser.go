@@ -16,6 +16,7 @@ type yamlSpec struct {
 		Version           string `yaml:"version"`
 		JavaVersion       string `yaml:"javaVersion"`
 		SpringBootVersion string `yaml:"springBootVersion"`
+		FractalXVersion   string `yaml:"fractalxVersion"`
 		Description       string `yaml:"description"`
 	} `yaml:"project"`
 	Services []struct {
@@ -75,6 +76,7 @@ func FromBytes(data []byte) (*model.ProjectSpec, error) {
 		Description:       y.Project.Description,
 		JavaVersion:       y.Project.JavaVersion,
 		SpringBootVersion: y.Project.SpringBootVersion,
+		FractalXVersion:   y.Project.FractalXVersion,
 		Security:          y.Security.Type,
 		Infra: model.InfraConfig{
 			Gateway:       y.Infrastructure.Gateway,
@@ -128,6 +130,9 @@ func FromBytes(data []byte) (*model.ProjectSpec, error) {
 	}
 	if spec.SpringBootVersion == "" {
 		spec.SpringBootVersion = "3.3.0"
+	}
+	if spec.FractalXVersion == "" {
+		spec.FractalXVersion = "0.3.2"
 	}
 	if spec.Security == "" {
 		spec.Security = "none"

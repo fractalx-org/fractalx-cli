@@ -159,12 +159,12 @@ func genPom(spec *model.ProjectSpec) string {
 		<dependency>
 			<groupId>org.fractalx</groupId>
 			<artifactId>fractalx-annotations</artifactId>
-			<version>0.3.2</version>
+			<version>%s</version>
 		</dependency>
 		<dependency>
 			<groupId>org.fractalx</groupId>
 			<artifactId>fractalx-runtime</artifactId>
-			<version>0.3.2</version>
+			<version>%s</version>
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -204,7 +204,7 @@ func genPom(spec *model.ProjectSpec) string {
 			<plugin>
 				<groupId>org.fractalx</groupId>
 				<artifactId>fractalx-maven-plugin</artifactId>
-				<version>0.3.2</version>
+				<version>%s</version>
 			</plugin>
 		</plugins>
 	</build>
@@ -218,6 +218,9 @@ func genPom(spec *model.ProjectSpec) string {
 		spec.ArtifactID,
 		spec.Description,
 		spec.JavaVersion,
+		spec.FractalXVersion,
+		spec.FractalXVersion,
 		deps.String(),
+		spec.FractalXVersion,
 	)
 }
