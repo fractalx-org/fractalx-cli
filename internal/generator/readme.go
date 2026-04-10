@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/fractalx/fractalx-init/internal/model"
+	"github.com/fractalx/fractalx-cli/internal/model"
 )
 
 func genReadme(spec *model.ProjectSpec) string {

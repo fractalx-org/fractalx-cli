@@ -1,6 +1,6 @@
 version: 2
 
-project_name: fractalx-init
+project_name: fractalx-cli
 
 before:
   hooks:
@@ -43,16 +43,16 @@ changelog:
       - Merge branch
 
 brews:
-  - name: fractalx-init
+  - name: fractalx-cli
     repository:
       owner: fractalx
       name: homebrew-tap
       token: "{{ .Env.HOMEBREW_TAP_TOKEN }}"
     directory: Formula
-    homepage: https://github.com/fractalx/fractalx-init
-    description: "FractalX Initializr — generate a Spring Boot monolith ready for decomposition"
+    homepage: https://github.com/fractalx/fractalx-cli
+    description: "FractalX CLI — generate a Spring Boot monolith ready for decomposition"
     license: Apache-2.0
     test: |
-      system "#{bin}/fractalx-init", "--help"
+      system "#{bin}/fractalx", "--help"
     install: |
-      bin.install "fractalx-init"
+      bin.install "fractalx"

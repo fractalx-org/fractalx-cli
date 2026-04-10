@@ -1,12 +1,12 @@
 #!/usr/bin/env sh
-# fractalx-init installer
-# Usage: curl -fsSL https://raw.githubusercontent.com/fractalx/fractalx-init/main/install.sh | sh
+# fractalx installer
+# Usage: curl -fsSL https://raw.githubusercontent.com/fractalx/fractalx-cli/main/install.sh | sh
 
 set -e
 
-REPO="fractalx/fractalx-init"
+REPO="fractalx/fractalx-cli"
 INSTALL_DIR="${FRACTALX_INSTALL_DIR:-/usr/local/bin}"
-BINARY="fractalx-init"
+BINARY="fractalx"
 
 # Detect OS and architecture
 OS="$(uname -s | tr '[:upper:]' '[:lower:]')"
@@ -38,16 +38,16 @@ if [ -z "$LATEST" ]; then
 fi
 
 VERSION="${LATEST#v}"
-FILENAME="${BINARY}_${VERSION}_${OS}_${ARCH}.${EXT}"
-URL="https://github.com/$REPO/releases/download/$LATEST/$FILENAME"
+ARCHIVE="fractalx-cli_${VERSION}_${OS}_${ARCH}.${EXT}"
+URL="https://github.com/$REPO/releases/download/$LATEST/$ARCHIVE"
 
-echo "Installing fractalx-init $LATEST ($OS/$ARCH)..."
+echo "Installing fractalx $LATEST ($OS/$ARCH)..."
 
 TMP="$(mktemp -d)"
 trap 'rm -rf "$TMP"' EXIT
 
-curl -fsSL "$URL" -o "$TMP/$FILENAME"
-tar -xzf "$TMP/$FILENAME" -C "$TMP"
+curl -fsSL "$URL" -o "$TMP/$ARCHIVE"
+tar -xzf "$TMP/$ARCHIVE" -C "$TMP"
 
 if [ ! -f "$TMP/$BINARY" ]; then
   echo "Binary not found in archive. Please report this at https://github.com/$REPO/issues"
@@ -64,8 +64,8 @@ else
 fi
 
 echo ""
-echo "  fractalx-init $LATEST installed to $INSTALL_DIR/$BINARY"
+echo "  fractalx $LATEST installed to $INSTALL_DIR/$BINARY"
 echo ""
 echo "  Get started:"
-echo "    fractalx-init"
+echo "    fractalx"
 echo ""

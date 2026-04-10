@@ -3,8 +3,8 @@ package generator
 import (
 	"fmt"
 
-	"github.com/fractalx/fractalx-init/internal/model"
-	"github.com/fractalx/fractalx-init/internal/transform"
+	"github.com/fractalx/fractalx-cli/internal/model"
+	"github.com/fractalx/fractalx-cli/internal/transform"
 )
 
 func genK8s(spec *model.ProjectSpec, svc *model.Service) string {

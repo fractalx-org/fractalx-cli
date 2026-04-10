@@ -1,6 +1,6 @@
-# fractalx-init
+# fractalx-cli
 
-**FractalX Initializr** — a CLI tool that generates a Spring Boot modular monolith pre-annotated with [FractalX](https://github.com/fractalx/FractalX) decomposition markers. When you're ready to scale, run `mvn fractalx:decompose` to split it into production-ready microservices.
+**FractalX CLI** — a command-line tool that generates a Spring Boot modular monolith pre-annotated with [FractalX](https://github.com/fractalx/FractalX) decomposition markers. When you're ready to scale, run `mvn fractalx:decompose` to split it into production-ready microservices.
 
 Think of it as `start.spring.io`, but purpose-built for the decomposition-first workflow.
 
@@ -11,31 +11,31 @@ Think of it as `start.spring.io`, but purpose-built for the decomposition-first 
 ### Homebrew (macOS / Linux)
 
 ```bash
-brew install fractalx/tap/fractalx-init
+brew install fractalx/tap/fractalx-cli
 ```
 
 ### curl (macOS / Linux)
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/fractalx/fractalx-init/main/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/fractalx/fractalx-cli/main/install.sh | sh
 ```
 
 ### Go install
 
 ```bash
-go install github.com/fractalx/fractalx-init@latest
+go install github.com/fractalx/fractalx-cli@latest
 ```
 
 ### Manual download
 
-Download the binary for your platform from [GitHub Releases](https://github.com/fractalx/fractalx-init/releases), extract, and place it on your `$PATH`.
+Download the binary for your platform from [GitHub Releases](https://github.com/fractalx/fractalx-cli/releases), extract, and place it on your `$PATH`.
 
 ---
 
 ## Quick start
 
 ```bash
-fractalx-init
+fractalx
 ```
 
 This launches an interactive 6-step wizard. At the end it downloads a `.zip` with a ready-to-compile Spring Boot project.
@@ -45,7 +45,7 @@ This launches an interactive 6-step wizard. At the end it downloads a `.zip` wit
 ## Usage
 
 ```
-fractalx-init [flags]
+fractalx [flags]
 ```
 
 | Flag | Default | Description |
@@ -59,13 +59,13 @@ fractalx-init [flags]
 
 ```bash
 # Interactive wizard → my-platform.zip in current directory
-fractalx-init
+fractalx
 
 # Re-generate from an existing spec, write directly to disk
-fractalx-init --from fractalx.yaml --no-zip
+fractalx --from fractalx.yaml --no-zip
 
 # Write ZIP to a specific folder
-fractalx-init --output ~/projects
+fractalx --output ~/projects
 ```
 
 ---
@@ -193,7 +193,7 @@ The generated `fractalx.yaml` is a complete round-trip spec. You can edit it and
 
 ```bash
 # Edit fractalx.yaml to add a new service, then regenerate
-fractalx-init --from fractalx.yaml --no-zip --output ./regenerated
+fractalx --from fractalx.yaml --no-zip --output ./regenerated
 ```
 
 `fractalx.yaml` format:
@@ -280,7 +280,7 @@ Running `mvn fractalx:decompose` reads these markers, validates the dependency g
 
 ## Validation
 
-Before generating, `fractalx-init` checks:
+Before generating, `fractalx` checks:
 
 - **Circular dependencies** — detected via DFS; generation is blocked if any cycle exists
 - **Port uniqueness** — two services cannot share a port
@@ -290,7 +290,7 @@ Before generating, `fractalx-init` checks:
 
 ## Contributing
 
-Issues and pull requests welcome at [github.com/fractalx/fractalx-init](https://github.com/fractalx/fractalx-init).
+Issues and pull requests welcome at [github.com/fractalx/fractalx-cli](https://github.com/fractalx/fractalx-cli).
 
 ## License
 

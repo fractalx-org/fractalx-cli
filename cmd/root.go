@@ -5,11 +5,11 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/fractalx/fractalx-init/internal/generator"
-	"github.com/fractalx/fractalx-init/internal/model"
-	"github.com/fractalx/fractalx-init/internal/spec"
-	"github.com/fractalx/fractalx-init/internal/validate"
-	"github.com/fractalx/fractalx-init/internal/wizard"
+	"github.com/fractalx/fractalx-cli/internal/generator"
+	"github.com/fractalx/fractalx-cli/internal/model"
+	"github.com/fractalx/fractalx-cli/internal/spec"
+	"github.com/fractalx/fractalx-cli/internal/validate"
+	"github.com/fractalx/fractalx-cli/internal/wizard"
 	"github.com/spf13/cobra"
 )
 
@@ -20,9 +20,9 @@ var (
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "fractalx-init",
-	Short: "FractalX Initializr — generate a Spring Boot monolith ready for decomposition",
-	Long: `fractalx-init generates a Spring Boot monolith pre-annotated with
+	Use:   "fractalx",
+	Short: "FractalX CLI — generate a Spring Boot monolith ready for decomposition",
+	Long: `fractalx generates a Spring Boot monolith pre-annotated with
 FractalX decomposition markers. Run it interactively (default) or
 supply a fractalx.yaml spec with --from to skip the wizard.
 

@@ -3,7 +3,7 @@ package generator
 import (
 	"strings"
 
-	"github.com/fractalx/fractalx-init/internal/model"
+	"github.com/fractalx/fractalx-cli/internal/model"
 )
 
 func genDocker(spec *model.ProjectSpec) string {
