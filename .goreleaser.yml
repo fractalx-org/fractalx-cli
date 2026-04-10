@@ -51,7 +51,7 @@ brews:
     directory: Formula
     homepage: https://github.com/fractalx/fractalx-init
     description: "FractalX Initializr — generate a Spring Boot monolith ready for decomposition"
-    license: MIT
+    license: Apache-2.0
     test: |
       system "#{bin}/fractalx-init", "--help"
     install: |

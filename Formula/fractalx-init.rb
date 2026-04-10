@@ -4,7 +4,7 @@ class FractalxInit < Formula
   desc "FractalX Initializr — generate a Spring Boot monolith ready for decomposition"
   homepage "https://github.com/fractalx/fractalx-init"
   version "0.1.0"
-  license "MIT"
+  license "Apache-2.0"
 
   on_macos do
     on_arm do
