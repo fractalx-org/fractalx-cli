@@ -45,11 +45,11 @@ changelog:
 brews:
   - name: fractalx-cli
     repository:
-      owner: fractalx
+      owner: fractalx-org
       name: homebrew-tap
       token: "{{ .Env.HOMEBREW_TAP_TOKEN }}"
     directory: Formula
-    homepage: https://github.com/fractalx/fractalx-cli
+    homepage: https://github.com/fractalx-org/fractalx-cli
     description: "FractalX CLI — generate a Spring Boot monolith ready for decomposition"
     license: Apache-2.0
     test: |

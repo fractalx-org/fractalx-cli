@@ -6,7 +6,7 @@ import (
 	"strings"
 
 	"github.com/AlecAivazis/survey/v2"
-	"github.com/fractalx/fractalx-cli/internal/model"
+	"github.com/fractalx-org/fractalx-cli/internal/model"
 )
 
 // Run executes the interactive 6-step wizard and returns a fully populated ProjectSpec.

@@ -1,4 +1,4 @@
-module github.com/fractalx/fractalx-cli
+module github.com/fractalx-org/fractalx-cli
 
 go 1.25.5
 

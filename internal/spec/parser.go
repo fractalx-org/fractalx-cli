@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/fractalx/fractalx-cli/internal/model"
+	"github.com/fractalx-org/fractalx-cli/internal/model"
 	"gopkg.in/yaml.v3"
 )
 

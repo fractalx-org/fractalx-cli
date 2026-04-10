@@ -17,18 +17,18 @@ brew install fractalx/tap/fractalx-cli
 ### curl (macOS / Linux)
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/fractalx/fractalx-cli/main/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/fractalx-org/fractalx-cli/main/install.sh | sh
 ```
 
 ### Go install
 
 ```bash
-go install github.com/fractalx/fractalx-cli@latest
+go install github.com/fractalx-org/fractalx-cli@latest
 ```
 
 ### Manual download
 
-Download the binary for your platform from [GitHub Releases](https://github.com/fractalx/fractalx-cli/releases), extract, and place it on your `$PATH`.
+Download the binary for your platform from [GitHub Releases](https://github.com/fractalx-org/fractalx-cli/releases), extract, and place it on your `$PATH`.
 
 ---
 
@@ -290,7 +290,7 @@ Before generating, `fractalx` checks:
 
 ## Contributing
 
-Issues and pull requests welcome at [github.com/fractalx/fractalx-cli](https://github.com/fractalx/fractalx-cli).
+Issues and pull requests welcome at [github.com/fractalx-org/fractalx-cli](https://github.com/fractalx-org/fractalx-cli).
 
 ## License
 

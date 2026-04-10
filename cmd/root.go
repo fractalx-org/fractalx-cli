@@ -5,11 +5,11 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/fractalx/fractalx-cli/internal/generator"
-	"github.com/fractalx/fractalx-cli/internal/model"
-	"github.com/fractalx/fractalx-cli/internal/spec"
-	"github.com/fractalx/fractalx-cli/internal/validate"
-	"github.com/fractalx/fractalx-cli/internal/wizard"
+	"github.com/fractalx-org/fractalx-cli/internal/generator"
+	"github.com/fractalx-org/fractalx-cli/internal/model"
+	"github.com/fractalx-org/fractalx-cli/internal/spec"
+	"github.com/fractalx-org/fractalx-cli/internal/validate"
+	"github.com/fractalx-org/fractalx-cli/internal/wizard"
 	"github.com/spf13/cobra"
 )
 

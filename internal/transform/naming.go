@@ -5,7 +5,7 @@ import (
 	"strings"
 	"unicode"
 
-	"github.com/fractalx/fractalx-cli/internal/model"
+	"github.com/fractalx-org/fractalx-cli/internal/model"
 )
 
 // javaReserved is the set of Java reserved words that must not appear as package segments.

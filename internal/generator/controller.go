@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/fractalx/fractalx-cli/internal/model"
-	"github.com/fractalx/fractalx-cli/internal/transform"
+	"github.com/fractalx-org/fractalx-cli/internal/model"
+	"github.com/fractalx-org/fractalx-cli/internal/transform"
 )
 
 func genController(spec *model.ProjectSpec, svc *model.Service, ent *model.Entity) string {

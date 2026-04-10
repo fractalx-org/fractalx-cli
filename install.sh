@@ -1,10 +1,10 @@
 #!/usr/bin/env sh
 # fractalx installer
-# Usage: curl -fsSL https://raw.githubusercontent.com/fractalx/fractalx-cli/main/install.sh | sh
+# Usage: curl -fsSL https://raw.githubusercontent.com/fractalx-org/fractalx-cli/main/install.sh | sh
 
 set -e
 
-REPO="fractalx/fractalx-cli"
+REPO="fractalx-org/fractalx-cli"
 INSTALL_DIR="${FRACTALX_INSTALL_DIR:-/usr/local/bin}"
 BINARY="fractalx"
 

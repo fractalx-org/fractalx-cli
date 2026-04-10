@@ -8,8 +8,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/fractalx/fractalx-cli/internal/model"
-	"github.com/fractalx/fractalx-cli/internal/transform"
+	"github.com/fractalx-org/fractalx-cli/internal/model"
+	"github.com/fractalx-org/fractalx-cli/internal/transform"
 )
 
 // GenerateZip generates the project as a ZIP file at the given output path.
